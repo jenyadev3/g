@@ -732,12 +732,24 @@ cite {
   flex-direction: column;
   text-align: center;
 }
-
 .footer .privacy {
   margin: 30px 0;
-  text-decoration: underline;
 }
 
-.copyright {
-  text-decoration: underline;
+.footer .privacy:after {
+  content: "";
+  display: block;
+  width: 305px;
+  height: 2px;
+  margin: 5px auto;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.copyright:after {
+  content: "";
+  display: block;
+  width: 500px;
+  height: 2px;
+  margin: 5px auto;
+  background-color: rgba(0, 0, 0, 1);
 }
