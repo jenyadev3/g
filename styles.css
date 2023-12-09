@@ -622,19 +622,19 @@ cite {
   margin: 0 auto;
 }
 
-.appointment-wrap {
+.appointment-wrap, .modal-wrap {
   display: flex;
   width: 100%;
   margin-top: 50px;
   justify-content: space-between;
 }
 
-.appointment-title {
+.appointment-title, .modal-title {
   font-size: 40px;
   text-transform: uppercase;
 }
 
-.appointment-form {
+.appointment-form, .modal-form {
   width: 60%;
   margin-top: 50px;
   display: flex;
@@ -653,7 +653,7 @@ cite {
   border-bottom: 2px solid rgba(0, 0, 0, 1);
 }
 
-#checkbox ~ label {
+#checkbox ~ label, #modal-checkbox ~ label {
   font-size: 15px;
 }
 
@@ -661,7 +661,7 @@ cite {
   color: rgba(0, 0, 0, 1);
 }
 
-.appointment-text-block {
+.appointment-text-block, .modal-text-block {
   width: 26%;
 }
 
@@ -704,7 +704,7 @@ cite {
   margin-right: 65px;
 }
 
-.appointment-button {
+.appointment-button, .modal-button {
   margin-top: 58px;
   border: 1px solid rgba(0, 0, 0, 1);
   background-color: rgba(0, 0, 0, 1);
@@ -714,7 +714,7 @@ cite {
   transition: background-color 0.5s, color 0.5s;
 }
 
-.appointment-button:hover {
+.appointment-button:hover, .modal-button:hover {
   background-color: rgba(255, 255, 255, 1);
   color:rgba(0, 0, 0, 1);
 }
@@ -753,3 +753,94 @@ cite {
   margin: 5px auto;
   background-color: rgba(0, 0, 0, 1);
 }
+
+/* Модальное окно */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  z-index:1;
+  background-color:rgba(0, 0, 0, 0.8);
+  justify-content: center;
+}
+
+.modal-container {
+  position: absolute;
+  top:50%;
+  left: 50%;
+  z-index:2;
+  box-sizing: border-box;
+  width: 1000px;
+  height: 470px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 1);
+  transform: translate(-50%, -50%);
+}
+
+#modal-fullname, #modal-phone, #modal-description {
+  margin: 15px 0;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.modal-text-block {
+  padding-right: 30px;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.modal-wrap {
+  margin-top: 5px;
+}
+
+.modal-text-block .phone,
+.modal-text-block .email {
+  margin-right: 45px;
+}
+
+.modal-button {
+  margin-top: 10px;
+}
+
+.modal .contact-item {
+  border: 1px solid rgba(0, 0, 0, 1);
+  width: 52px;
+  height: 52px;
+}
+
+.modal .contact-link {
+  display: inline-block;
+  width: 52px;
+  height: 52px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.close-button {
+  position: absolute;
+  width: 40px;
+  height:40px;
+  top:0;
+  right:0;
+  padding: 0;
+  border: none;
+  background-color:white;
+  background-image:url("images/close.svg");
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: transparent;
+  cursor: pointer;
+}
+
+.close-button:focus,
+.close-button:active {
+  outline: none;
+}
+

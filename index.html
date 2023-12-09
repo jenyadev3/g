@@ -25,7 +25,7 @@
         <p class="banner-text"><span class="big-text">Адвокат</span></p>
         <p class="banner-text"><span class="medium-text">Кретова Луиза Наимовна</span></p>
         <p class="banner-text"><span class="small-text">Просто решение сложных вопросов уже более 20 лет</span></p>
-        <a class="banner-link" href="#">Хочу консультацию</a>
+        <a class="banner-link consult" href="#">Хочу консультацию</a>
       </div>
       <ul class="banner-list">
         <li class="banner-item"><span class="banner-number">> 20</span><p class="banner-item-text"></p> лет практики</p></li>
@@ -87,7 +87,7 @@
           <div class="step-description">
             <h3 class="step-description-title">01.Консультация</h3>
             <p class="step-description-text">Порядок может различаться в зависимости от типа юридического вопроса</p>
-            <a class="step-button" href="#">Хочу консультацию</a>
+            <a class="step-button consult" href="#">Хочу консультацию</a>
           </div>
           <a  class="further-link" href="#">Подробнее</a>
           <div class="step-content">
@@ -292,7 +292,7 @@
   </section>
   <section class="appointment">
     <div class="appointment-container">
-    <h2 class="appointment-title">Запись на консультацию</h2>
+    <h2 class="appointment-title consult">Запись на консультацию</h2>
     <div class="appointment-wrap">
       <form class="appointment-form">
         <label for="fullname">ФИО</label>
@@ -317,7 +317,7 @@
         <p class="email">luiza.kretova@mail.ru</p>
       </div>
     </div>
-    <button type="submit" class="appointment-button">Хочу консультацию</button>
+    <button type="submit" class="appointment-button consult">Хочу консультацию</button>
   </div>
     </section>
     <footer class="footer">
@@ -327,7 +327,39 @@
         <p class="copyright" href="#">Луиза Кретова ©, 2020-2023 — Все права защищены </p>
       </div>
     </footer>
+
+    <!-- Модальное окно -->
+    <section class="modal">
+      <div class="modal-container">
+      <input class="close-button"><span class="visually-hidden">Закрыть окно</span>
+      <h2 class="modal-title">Запись на консультацию</h2>
+      <div class="modal-wrap">
+        <form class="modal-form">
+          <label for="modal-fullname">ФИО</label>
+          <input type="text" id="modal-fullname" name="fullname">
+          <label for="modal-phone">Номер телефона</label>
+          <input type="text" id="modal-phone" name="phone">
+          <label for="modal-description">Описание вопроса</label> 
+          <input type="text" id="modal-description" name="description">
+          <div>
+            <input type="checkbox" id="modal-checkbox" name="checkbox">
+            <label for="modal-checkbox">Согласен на обработку персональных данных и с условиями <a class="privacy" href="#">политики конфиденциальности</a></label>
+          </div>
+        </form>
+        <div class="modal-text-block">
+          <p class="modal-text">Заполните обязательные поля (под *), мы обсудим вашу ситуацию и договоримся о встрече.</p>
+          <ul class="modal-contact-list contact-list">
+            <li class="contact-item"><a class="contact-link ph" href="#"></a></li>
+            <li class="contact-item"><a class="contact-link tg" href="#"><span class="visually-hidden">Телеграм</span></a></li>
+            <li class="contact-item"><a class="contact-link whatsapp" href="#"><span class="visually-hidden">Ватсап</span></a></li>
+          </ul>
+          <p class="phone">+7 (999)555-01-55</p>
+          <p class="email">luiza.kretova@mail.ru</p>
+        </div>
+      </div>
+      <button type="submit" class="modal-button">Хочу консультацию</button>
+    </div>
+      </section>  
   </body>
-<script src="script.js"></script>
-<script src="slider.js"></script>
+ <script src="script.js"></script>
 </html>
