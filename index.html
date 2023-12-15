@@ -9,7 +9,13 @@
 </head>
 <body>
   <header class="header">
-    <a class="logo"><img src="images/logo.svg"></a>
+    <div class="header-wrap">
+      <svg class="burger" width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line y1="1" x2="20" y2="1" stroke="#191919" stroke-width="2"/>
+        <line y1="6" x2="20" y2="6" stroke="#191919" stroke-width="2"/>
+        <line y1="11" x2="20" y2="11" stroke="#191919" stroke-width="2"/>
+        </svg>
+    <a class="logo"><img class="logo-img" src="images/logo.svg"></a>
     <ul class="header-menu menu">
       <li class="menu-item"><a class="menu-link" href="#">Главная</a></li>
       <li class="menu-item"><a class="menu-link" href="#">Обо мне</a></li>
@@ -18,23 +24,29 @@
       <li class="menu-item"><a class="menu-link" href="#">Контакты</a></li>
     </ul>
     <a class="phone-link" href="#"><span class="visually-hidden">Позвонить</span></a>
+  </div>
   </header>
   <main>
     <section class="banner">
+      <div class="banner-text-block">
+        <p class="banner-text"><span class="big-text">Адвокат</span></p>
+        <p class="banner-text"><span class="medium-text">Кретова Луиза Наимовна</span></p>
       <div class="banner-wrap">
-        <div class="banner-text-block">
-          <p class="banner-text"><span class="big-text">Адвокат</span></p>
-          <p class="banner-text"><span class="medium-text">Кретова Луиза Наимовна</span></p>
-          <p class="banner-text"><span class="small-text">Просто решение сложных вопросов уже более 20 лет</span></p>
-          <a class="banner-link consult" href="#">Хочу консультацию</a>
-        </div>
-        <ul class="banner-list">
-          <li class="banner-item"><span class="banner-number">> 20</span><p class="banner-item-text"></p> лет практики</p></li>
-          <li class="banner-item"><span class="banner-number">10 тыс.</span><p class="banner-item-text">изученных томов</p></li>
-          <li class="banner-item"><span class="banner-number">100</span><p class="banner-item-text">успешных апелляций</p></li>
-          <li class="banner-item"><span class="banner-number">10 тыс.</span><p class="banner-item-text">часов судебных заседаний</p></li>
-        </ul>
+        <p class="banner-text"><span class="small-text">Просто решение сложных вопросов уже более 20 лет</span></p>
+        <a class="banner-link consult" href="#">Хочу консультацию</a>
       </div>
+      </div>
+      <ul class="banner-list">
+        <li class="banner-item"><span class="banner-number">> 20</span><p class="banner-item-text"></p> лет практики</p></li>
+        <li class="banner-item"><span class="banner-number">10 тыс.</span><p class="banner-item-text">изученных томов</p></li>
+        <li class="banner-item"><span class="banner-number">100</span><p class="banner-item-text">успешных апелляций</p></li>
+        <li class="banner-item"><span class="banner-number">10 тыс.</span><p class="banner-item-text">часов судебных заседаний</p></li>
+      </ul>
+      <ul class="banner-list-mob">
+        <li class="banner-item"><span class="banner-number">12 тысяч</span><p class="banner-item-text">часов судебных заседаний</p></li>
+        <li class="banner-item"><span class="banner-number">120</span><p class="banner-item-text">успешных апелляций</p></li>
+        <li class="banner-item"><span class="banner-number">10 тыс.</span><p class="banner-item-text">изученных томов</p></li>
+      </ul>
     </section>
     <section class="services">
       <div class="services-titles-block">
@@ -83,12 +95,14 @@
     <section class="steps">
       <div class="steps-wrap">
         <h2 class="steps-title">Этапы сотрудничества</h2>
+        <p class="step-text">могут немного меняться в зависимости от типа юридического вопроса</p>
         <ol class="steps-list">
           <li class="steps-item consultation">
             <div class="step-description">
-              <h3 class="step-description-title">01.Консультация</h3>
+              <h3 class="step-description-title">Консультация</h3>
               <p class="step-description-text">Порядок может различаться в зависимости от типа юридического вопроса</p>
-              <a class="step-button consult" href="#">Хочу консультацию</a>
+              <a class="step-button consult-desk" href="#">Хочу консультацию</a>
+              <a class="step-button consult-mob" href="#">Заказать</a>
             </div>
             <a  class="further-link" href="#">Подробнее</a>
             <div class="step-content">
@@ -103,7 +117,7 @@
           </li>
           <li class="steps-item">
             <div class="step-description">
-              <h3 class="step-description-title">02.Заключение соглашения</h3>
+              <h3 class="step-description-title">Заключение соглашения</h3>
               <p class="step-description-text">Четкие ожидания и план действий для решения юридического вопроса</p>
               <a class="further-button" href="#">Подробнее</a>
               </div>
@@ -119,7 +133,7 @@
           </li>
           <li class="steps-item">
             <div class="step-description">
-              <h3 class="step-description-title">03.Акт выполненных услуг</h3>
+              <h3 class="step-description-title">Акт выполненных услуг</h3>
               <p class="step-description-text">С чувством ответственности перед своим клиентом при выполнении условий соглашений</p>
               <a  class="further-button" href="#">Подробнее</a>
             </div>
@@ -200,6 +214,26 @@
             </div>
         </div>
       </div>
+      <div class="faq-mobile-block">
+        <div class="faq-text-mob">
+          <p class="faq-text">Задайте свой вопрос АНОНИМНО, и совсем скоро он с ответом появится на сайте. </p>
+        </div>
+        <form class="faq-form form" action="/submit" method="post">
+          <div class="form-wrap">
+            <div class="form-input-block">
+              <label for="name">Имя</label>
+              <input type="text" id="name" name="name">
+            </div>
+            <div class="form-textarea-block">
+              <label for="question">Ваш вопрос</label>
+              <textarea id="question" name="question"></textarea>
+            </div>
+          <div class="button-block">
+            <input class="send-button" type="submit" value="Отправить">
+          </div>
+
+        </form>
+      </div>
     </section>
     <section class="about">
       <div class="about-top">
@@ -211,7 +245,7 @@
           <p class="about-text">Успешно выполняю свой профессиональный долг  с 1999 года в судах Российской Федерации любых составов и видов инстанции.  </p>
         </div>
         <div class="about-img-block">
-          <img>
+          <img class="about-img">
         </div>
       </div>
       <div class="about-bottom">
@@ -236,7 +270,7 @@
       </div>
     </section>
     <section class="articles">
-      <div>
+      <div class="articles-wrap">
         <h2 class="articles-title">Мои публикации</h2>
         <ul class="article-list">
           <li class="article-item">
@@ -246,7 +280,7 @@
                 </div>
                 <div class="article-text-block">
                   <h3 class="article-title">Цифровой рабочий процесс</h3>
-                  <p>Легко получать доступ к документам и обмениваться ими, общаться с клиентами и коллегами и управлять информацией о делах в одном месте.</p>
+                  <p class="article-text">Легко получать доступ к документам и обмениваться ими, общаться с клиентами и коллегами и управлять информацией о делах в одном месте.</p>
                   <footer class="article-footer">
                     <cite>Автор: Кретова Л.Н.</cite>
                     <a  class="further-link" href="#">Подробнее</a>
@@ -261,7 +295,7 @@
                  </div>
                  <div class="article-text-block">
                   <h3 class="article-title">Коммуникация в отношениях с клиентами</h3>
-                  <p>Эффективно доносить сложные юридические понятия и информацию до клиентов таким образом, чтобы им было легко их понять.</p>
+                  <p class="article-text">Эффективно доносить сложные юридические понятия и информацию до клиентов таким образом, чтобы им было легко их понять.</p>
                   <footer class="article-footer">
                     <cite>Автор: Кретова Л.Н.</cite>
                     <a  class="further-link" href="#">Подробнее</a>
@@ -276,7 +310,7 @@
                 </div>
                 <div class="article-text-block">
                   <h3 class="article-title">Психология присяжных</h3>
-                  <p>Факторы, влияющие на восприятие присяжных, предубеждения и, в конечном счете, на их вердикты.Как убедить присяжных вынести решение в вашу пользу.</p>
+                  <p class="article-text">Факторы, влияющие на восприятие присяжных, предубеждения и, в конечном счете, на их вердикты.Как убедить присяжных вынести решение в вашу пользу.</p>
                   <footer class="article-footer">
                     <cite>Автор: Кретова Л.Н.</cite>
                     <a class="further-link" href="#">Подробнее</a>
@@ -302,7 +336,7 @@
           <input type="text" id="phone" name="phone">
           <label for="description">Описание вопроса</label> 
           <input type="text" id="description" name="description">
-          <div>
+          <div class="checkbox-wrap">
             <input type="checkbox" id="checkbox" name="checkbox">
             <label for="checkbox">Согласен на обработку персональных данных и с условиями <a class="privacy" href="#">политики конфиденциальности</a></label>
           </div>
@@ -318,7 +352,18 @@
           <p class="email">luiza.kretova@mail.ru</p>
         </div>
       </div>
-      <button type="submit" class="appointment-button">Хочу консультацию</button>
+      <div class="appointment-button-block">
+        <button type="submit" class="appointment-button">Хочу консультацию</button>
+      </div>
+      <div class="appointment-mobile-block">
+        <h2 class="appointment-mobile-title">Другие способы связи</h2>
+        <ul class="appointment-mobile-list mobile-list">
+          <li class="mobile-item"><a class="mobile-link call" href="#"><span class="visually-hidden">Позвонить</span></a></li>
+          <li class="mobile-item"><a class="mobile-link whatsapp" href="#"><span class="visually-hidden">Вотсапп</span></a></li>
+          <li class="mobile-item"><a class="mobile-link tg" href="#"><span class="visually-hidden">Телеграм</span></a></li>
+          <li class="mobile-item"><a class="mobile-link mail" href="#"><span class="visually-hidden">Почта</span></a></li>
+        </ul>
+      </div>
       </div>
     </section>    
   </main>
@@ -364,6 +409,6 @@
   </div>  
   
 </body>
-<script src="script.js"></script>
-<script src="slider.js"></script>
+<script src="./js/accordion.js"></script>
+<script src="./js/slider.js"></script>
 </html>
