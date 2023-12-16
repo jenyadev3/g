@@ -67,7 +67,7 @@ img {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  padding: 48px 0 75px;
+  padding: 30px 0;
 }
 
 .burger {
@@ -151,7 +151,7 @@ img {
 .banner-text-block {
   width: 94%;
   margin-left: auto;
-  padding-top: 20px;
+  padding-top: 50px;
 }
 
 .banner-text {
@@ -174,9 +174,25 @@ img {
   text-transform: uppercase;
 }
 
+.banner-bottom {
+  width: 95%;
+  margin-left: 76px;
+  display: grid;
+  grid-template-columns: 22.66% 77.12%;
+  grid-template-rows: 70px 210px;
+}
+
+.banner-link-block {
+  grid-area: 1 / 1 / 1 / 1;
+}
+
 .banner-link {
   display: inline-block;
-  padding: 20px 40px 20px 40px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  padding-top: 15px;
   background-color:rgba(0, 0, 0, 1);
   color:rgba(237, 232, 224, 1);
   border: 1px solid rgba(0, 0, 0, 1);
@@ -184,7 +200,6 @@ img {
   font-weight: 700;
   line-height: 30px;
   text-decoration: none;
-  margin-top: 60px;
   transition: background-color 0.5s, color 0.5s;
 }
 
@@ -193,15 +208,18 @@ img {
   color:rgba(0, 0, 0, 1);
 }
 
+.banner-link-mob {
+  display: none;
+}
+
 .banner-list {
   box-sizing: border-box;
-  width: 77%;
+  width: 100%;
   margin-left: auto;
   display: flex;
   justify-content: space-between;
-  padding: 0 60px;
-  padding-right: 0;
   background-color: rgba(255, 255, 255, 1);
+  grid-area: 2/2/2/2;
 }
 
 .banner-list-mob {
@@ -264,7 +282,20 @@ img {
     line-height: 16.7px;   
   }
 
+  .banner-bottom {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+
+  .banner-link-mob {
+    display: block;
+  }
+
   .banner-link {
+    width: 200px;
+    height: 48px;
     font-size: 15px;
     line-height: 20px;
     margin-top: 20px;
@@ -273,6 +304,10 @@ img {
 
   .banner-link:hover {
     background-color: transparent;
+  }
+
+  .banner-link-desk {
+    display: none;
   }
 
   .banner-list {
@@ -1112,9 +1147,6 @@ img {
 
 .article {
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .article-img-block {
@@ -1129,10 +1161,19 @@ img {
   width: 100%;
 }
 
+.article-text-block {
+  display: flex;
+  flex-direction: column;
+  height: 209px;
+}
+
 .article-title {
   font-size: 22px;
 }
 
+.article-footer {
+  margin-top: auto;
+}
 
 cite {
   font-style: normal;
