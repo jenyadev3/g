@@ -19,9 +19,6 @@
   font-style: normal;
 }
 
-html {
-  overflow-x: hidden;
-}
 
 body {
   min-width: 320px;
@@ -33,6 +30,7 @@ body {
   line-height: 24px;
   color: rgba(0, 0, 0, 1);
   background-color: rgba(255, 255, 255, 1);
+  overflow-x: hidden;
 }
 
 .visually-hidden {
@@ -571,6 +569,10 @@ img {
   margin-top: 13px;
 }
 
+.list-point-mob {
+  display: none;
+}
+
 .further-button {
   box-sizing: border-box;
   display: inline-block;
@@ -688,7 +690,7 @@ img {
   }
 
   .step-content {
-    line-height: 20px;
+    line-height: 15px;
     order: 2;
   }
 
@@ -700,6 +702,14 @@ img {
     font-size: 13px;
     margin-top: 5px;
   } 
+
+  .list-point-desk {
+    display: none;
+  }
+
+  .list-point-mob {
+    display: block;
+  }
   
   .steps-buttons-container {
     display: none;
