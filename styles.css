@@ -19,6 +19,9 @@
   font-style: normal;
 }
 
+.container {
+  overflow-x:hidden;
+}
 
 body {
   min-width: 320px;
@@ -30,7 +33,6 @@ body {
   line-height: 24px;
   color: rgba(0, 0, 0, 1);
   background-color: rgba(255, 255, 255, 1);
-  overflow-x: hidden;
 }
 
 .visually-hidden {
@@ -109,13 +111,13 @@ img {
 }
 
 
-@media (min-width: 390px) and (max-width: 767px) {
+@media (min-width: 390px) and (max-width: 991px) {
   .header {
     background-color: #E9E9E9;
   }
 
   .header-wrap {
-    width: 330px;
+    width: 85%;
     padding-top: 5px;
     padding-bottom: 7px;
   }
@@ -138,7 +140,6 @@ img {
   .phone-link {
     margin-top: 5px;
   }
-
 }
 
 /* Banner */
@@ -195,6 +196,7 @@ img {
   display: flex;
   justify-content: space-between;
   padding: 0 60px;
+  padding-right: 0;
   background-color: rgba(255, 255, 255, 1);
 }
 
@@ -222,13 +224,13 @@ img {
   letter-spacing: 2%;
 }
 
-@media (min-width: 390px) and (max-width: 767px) {
+@media (min-width: 390px) and (max-width: 991px) {
   .banner {
     background-color: #D9D9D9;
   }
 
   .banner-text-block {
-    width: 360px;
+    width: 92%;
     padding-top: 43px;
     padding-bottom: 40px;
   }
@@ -251,7 +253,7 @@ img {
   }
   
   .banner-wrap {
-    width: 240px;
+    width: 62%;
   }
 
   .banner-wrap .banner-text {
@@ -274,15 +276,17 @@ img {
   }
 
   .banner-list-mob {
+    box-sizing: border-box;
     width: 100%;
     display: flex;
-    padding: 0 30px;
+    justify-content: space-between;
+    padding: 0 10px;
     background-color:rgba(255, 255, 255, 1);
   }
 
   .banner-item {
-    width: 105px;
-    padding: 45px 0 45px;
+    width: 32%;
+    padding: 35px 0 45px;
     margin: 0;
   }
   
@@ -381,7 +385,7 @@ img {
 
 .service-button-block {
   text-align: center;
-  margin-top: 410px;
+  margin-top: 100px;
 }
 
 .service-button {
@@ -399,15 +403,15 @@ img {
   color: rgba(255, 255, 255, 1);
 }
 
-@media (min-width: 390px) and (max-width: 767px) {
+@media (min-width: 390px) and (max-width: 1249px) {
   .services {
     padding-top: 0;
     padding-bottom: 40px;
   }  
 
   .services-titles-block {
-    width: 239px;
-    margin-left: 30px;
+    width: 85%;
+    margin: 0 auto;
     margin-bottom: 12px;
   }
 
@@ -421,7 +425,7 @@ img {
   }
 
   .services-list {
-    width: 330px;
+    width: 85%;
   }
   
   .service-item {
@@ -436,7 +440,7 @@ img {
   }
    
   .service-item-wrap {
-    width: 285px;
+    width: 92%;
     margin-left: 20px;
   }
   
@@ -467,7 +471,7 @@ img {
 /* ЭТАПЫ */
 
 .steps {
-  padding: 260px 0;
+  padding: 160px 0;
 }
 
 .steps-wrap {
@@ -533,6 +537,7 @@ img {
   display: inline-block;
   padding: 20px 70px 20px 40px;
   text-decoration: none;
+  text-align: center;
   color:rgba(0, 0, 0, 1);
   border: 1px solid rgba(0, 0, 0, 1);
   margin-top: 10px;
@@ -580,6 +585,7 @@ img {
   border: 1px solid rgba(0, 0, 0, 1);
   color:rgba(0, 0, 0, 1);
   text-decoration: none;
+  text-align: center;
   padding: 20px 40px;
   margin-top: 20px;
   transition: opacity 0.5s;
@@ -610,7 +616,7 @@ img {
   background-image: url("images/prev-arrow.svg");
 }
 
-@media (min-width: 390px) and (max-width: 767px) {
+@media (min-width: 390px) and (max-width: 991px) {
   .steps {
     padding: 60px 0;
     border-top: 1px solid #000;
@@ -639,7 +645,7 @@ img {
   }
   
   .steps-item {
-    min-width: 246px;
+    width: 246px;
     max-height: 228px;
     padding: 15px 0 20px 50px; 
     flex-direction: column;
@@ -682,7 +688,7 @@ img {
   }
 
   .further-button {
-    width: 134px;
+    max-width: 134px;
     padding: 10px 20px;
     font-size: 14px;
     margin-top: 10px;
@@ -819,6 +825,8 @@ img {
 
 .send-button {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border: 1px solid rgba(0, 0, 0, 1);
   background-color: transparent;
   padding: 10px 18.5px;
@@ -829,7 +837,7 @@ img {
   opacity: 0.5;
 }
 
-@media (min-width: 390px) and (max-width: 767px) {
+@media (min-width: 390px) and (max-width: 1249px) {
   .faq-title {
     font-size: 25px;
     margin-left: 30px;
@@ -838,23 +846,26 @@ img {
 
   .faq-mobile-block {
     display: block;
-    width: 320px;
+    width: 82%;
     margin: 0 auto;
   }
   
   .faq-wrap {
-    min-width: 320px;
-    overflow: hidden;
+    width: 87%;
     margin-top: 25px;
   }
 
   .faq-left-column, .faq-right-column {
     display: flex;
-    gap: 33px;
+    gap: 35px;
+  }
+
+  .faq-left-column {
+    margin-right: 40px;
   }
   
   .faq-item {
-    width: 320px;
+    width: 330px;
     max-height: 325px;
     padding: 15px 0 20px 28px;
     margin-bottom: 30px;
@@ -886,9 +897,13 @@ img {
     padding: 20px 0;
   }
 
-  .form-wrap, .button-block {
-    width: 240px;
+  .form-wrap {
+    width: 82%;
     margin: 0 auto;
+  }
+
+  .button-block {
+    width: 82%;
   }
 
   .form-input-block label,
@@ -973,13 +988,13 @@ img {
   font-size: 50px;
 }
 
-@media (min-width: 390px) and (max-width: 767px) {
+@media (min-width: 390px) and (max-width: 1199px) {
   .about {
     padding: 60px 0;
   }
 
   .about-top, .about-block {
-    width: 320px;
+    width: 82%;
   }
 
   .about-block {
@@ -996,14 +1011,14 @@ img {
   }
 
   .about-img-block {
-    width: 330px;
+    width: 100%;
     height: 365px;
     background-color: #e0e0e0;
     margin-bottom: 60px;
   }
 
   .about-text-block {
-    width: 320px;
+    width: 100%;
     text-align: center;
   }
  
@@ -1018,7 +1033,7 @@ img {
   }
   
   .about-article {
-    width: 320px;
+    width: 100%;
   }
   
   .about-article-text {
@@ -1046,7 +1061,7 @@ img {
 .article-list {
   display: flex;
   margin-top: 75px;
-  gap: 36px;
+  gap: 40px;
 }
 
 .article-item {
@@ -1055,6 +1070,13 @@ img {
   min-height: 622px;
   padding: 40px;
   border: 1px solid rgba(0, 0, 0, 1);
+}
+
+.article {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .article-img-block {
@@ -1073,19 +1095,15 @@ img {
   font-size: 22px;
 }
 
-.article-footer {
-  margin-top: 20px;
-}
 
 cite {
   font-style: normal;
 }
 
-@media (min-width: 390px) and (max-width: 767px) {
+@media (min-width: 390px) and (max-width: 1199px) {
 
   .articles-wrap {
-    min-width: 320px;
-    overflow: hidden;
+    min-width: 82.05%;
   }
 
   .articles-title {
@@ -1115,10 +1133,6 @@ cite {
     font-size: 16px;
   }
   
-  .article-footer {
-    margin-top: 16px;
-  }
-
   cite {
     font-size: 13px;
   }
@@ -1242,13 +1256,13 @@ cite {
   color:rgba(0, 0, 0, 1);
 }
 
-@media (min-width: 390px) and (max-width: 767px) {
+@media (min-width: 390px) and (max-width: 991px) {
   .appointment {
     padding: 70px 0;
   }
   
   .appointment-container {
-    width: 320px;
+    width: 82.05%;
   }
   
   .appointment-wrap{
@@ -1260,7 +1274,7 @@ cite {
   }
 
   .mobile-list {
-    width: 320px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin-top: 35px;
@@ -1368,13 +1382,13 @@ cite {
   background-color: rgba(0, 0, 0, 1);
 }
 
-@media (min-width: 390px) and (max-width: 767px) {
+@media (min-width: 390px) and (max-width: 991px) {
   .footer {
     padding-bottom: 25px;
   }
   
   .footer-wrap {
-    width: 320px;
+    width: 82.05%;
   }
 
   .footer .privacy {
@@ -1387,13 +1401,12 @@ cite {
   }
   
   .footer .privacy:after {
-    width: 223px;
+    width: 67%;
   }
   
   .copyright:after {
-    width: 294px;
+    width: 92%
   }
-  
 
 }
 
