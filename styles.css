@@ -658,13 +658,13 @@ img {
   display: none;
 }
 
-.steps-buttons-container {
+.steps-buttons-container, .articles-buttons-container {
   margin-top: 40px;
   display: flex;
   gap: 30px;
 }
 
-.step-btn {
+.step-btn, .article-btn {
   width: 42px;
   height: 10px;
   background-color: transparent;
@@ -673,15 +673,15 @@ img {
   transition: opacity 0.5s;
 }
 
-.step-btn:hover {
+.step-btn:hover, .article-btn:hover {
   opacity: 0.5;
 }
 
-.next-step {
+.next-step, .next-article {
   background-image: url("images/next-arrow.svg");
 }
 
-.prev-step {
+.prev-step, .prev-article {
   background-image: url("images/prev-arrow.svg");
 }
 
