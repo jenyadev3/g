@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const articlePrevButton = articleContainer.querySelector(".prev-article")
   const articleNextButton = articleContainer.querySelector(".next-article")
   let currentIndex = 0;
+  let xDown = null;
 
   function slide(index, listSelector, itemWidthOffset) {
     const slides = document.querySelector(listSelector);
@@ -30,17 +31,17 @@ document.addEventListener('DOMContentLoaded', function () {
   stepsSlide(currentIndex);
   articleSlide(currentIndex);
 
-  // Добавляем обработчики для скроллинга при касании
+  // Добавляем обработчики для смахивания пальцем
   const stepsList = document.querySelector(".steps-list");
   const articleList = document.querySelector(".article-list");
 
   stepsList.addEventListener('touchstart', handleTouchStart);
   stepsList.addEventListener('touchmove', handleTouchMove);
+  stepsList.addEventListener('touchend', handleTouchEnd);
 
   articleList.addEventListener('touchstart', handleTouchStart);
   articleList.addEventListener('touchmove', handleTouchMove);
-
-  let xDown = null;
+  articleList.addEventListener('touchend', handleTouchEnd);
 
   function handleTouchStart(event) {
     xDown = event.touches[0].clientX;
@@ -72,7 +73,12 @@ document.addEventListener('DOMContentLoaded', function () {
       xDown = null;
     }
   }
+
+  function handleTouchEnd() {
+    xDown = null;
+  }
 });
+
 
 
 
