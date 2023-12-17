@@ -309,10 +309,6 @@ img {
     padding: 15px 30px 15px;
   }
 
-  .banner-link:hover {
-    background-color: transparent;
-  }
-
   .banner-link-desk {
     display: none;
   }
@@ -1292,6 +1288,10 @@ cite {
     font-weight: 400;
     margin: 0;
     margin-left: 45px;
+  }
+
+  .articles-buttons-container {
+    display: none;
   }
 }
 /* Запись */

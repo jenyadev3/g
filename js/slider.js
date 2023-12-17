@@ -1,34 +1,80 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const wrap = document.querySelector(".steps-wrap");
-  const prevButton = document.querySelector(".prev-step");
-  const nextButton = document.querySelector('.next-step');
+  const stepsContainer = document.querySelector(".steps-buttons-container");
+  const articleContainer = document.querySelector(".articles-buttons-container");
+  const stepsPrevButton = stepsContainer.querySelector(".prev-step");
+  const stepsNextButton = stepsContainer.querySelector('.next-step');
+  const articlePrevButton = articleContainer.querySelector(".prev-article")
+  const articleNextButton = articleContainer.querySelector(".next-article")
   let currentIndex = 0;
 
-  function showSlide(index) {
-    const slides = document.querySelector(".steps-wrap .steps-list");
-    const itemWidth = document.querySelector(".steps-item").offsetWidth;
-    const slideWidth = itemWidth + 50;
-    
-    currentIndex = index;
-    slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  function slide(index, listSelector, itemWidthOffset) {
+    const slides = document.querySelector(listSelector);
+    const itemWidth = slides.querySelector("li").offsetWidth;
+    currentIndex = (index + slides.children.length) % slides.children.length;
+    slides.style.transform = `translateX(-${currentIndex * (itemWidth + itemWidthOffset)}px)`;
   }
 
-  function showPrevSlide() {
-    const slides = document.querySelector(".steps-list");
-    currentIndex = (currentIndex - 1 + slides.children.length) % slides.children.length;
-    showSlide(currentIndex);
+  function stepsSlide(index) {
+    slide(index, ".steps-list", 50);
   }
 
-  function showNextSlide() {
-    const slides = document.querySelector(".steps-wrap .steps-list");
-    currentIndex = (currentIndex + 1) % slides.children.length;
-    showSlide(currentIndex);
+  function articleSlide(index) {
+    slide(index, ".article-list", 40);
   }
 
-  prevButton.addEventListener('click', showPrevSlide);
-  nextButton.addEventListener('click', showNextSlide);
+  stepsPrevButton.addEventListener('click', () => stepsSlide(currentIndex - 1));
+  stepsNextButton.addEventListener('click', () => stepsSlide(currentIndex + 1));
+  articlePrevButton.addEventListener('click', () => articleSlide(currentIndex - 1));
+  articleNextButton.addEventListener('click', () => articleSlide(currentIndex + 1));
 
-  showSlide(currentIndex);
+  stepsSlide(currentIndex);
+  articleSlide(currentIndex);
+
+  // Добавляем обработчики для скроллинга при касании
+  const stepsList = document.querySelector(".steps-list");
+  const articleList = document.querySelector(".article-list");
+
+  stepsList.addEventListener('touchstart', handleTouchStart);
+  stepsList.addEventListener('touchmove', handleTouchMove);
+
+  articleList.addEventListener('touchstart', handleTouchStart);
+  articleList.addEventListener('touchmove', handleTouchMove);
+
+  let xDown = null;
+
+  function handleTouchStart(event) {
+    xDown = event.touches[0].clientX;
+  }
+
+  function handleTouchMove(event) {
+    if (!xDown) {
+      return;
+    }
+
+    let xUp = event.touches[0].clientX;
+    let xDiff = xDown - xUp;
+
+    if (Math.abs(xDiff) > 0) {
+      if (xDiff > 0) {
+        // Swipe left
+        currentIndex += 1;
+      } else {
+        // Swipe right
+        currentIndex -= 1;
+      }
+
+      if (event.currentTarget.classList.contains('steps-list')) {
+        stepsSlide(currentIndex);
+      } else if (event.currentTarget.classList.contains('article-list')) {
+        articleSlide(currentIndex);
+      }
+
+      xDown = null;
+    }
+  }
 });
+
+
+
 
   
