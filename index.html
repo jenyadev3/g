@@ -387,7 +387,7 @@
   </footer>
 
     <!-- Модальное окно -->
-  <div class="modal">
+  <div class="modal modal-desk">
     <div class="modal-container">
     <input class="close-button"><span class="visually-hidden">Закрыть окно</span>
     <h2 class="modal-title">Запись на консультацию</h2>
@@ -419,8 +419,31 @@
     </div>
   </div>  
   
+  <!-- Модальное окно для моб.версии -->
+  <div class="modal modal-mob">
+    <div class="modal-container">
+    <input class="close-button"><span class="visually-hidden">Закрыть окно</span>
+    <h2 class="modal-title">Запись на консультацию</h2>
+      <div class="modal-wrap">
+      <form class="appointment-form">
+        <label for="fullname">ФИО</label>
+        <input type="text" id="fullname" name="fullname">
+        <label for="phone">Номер телефона</label>
+        <input type="text" id="phone" name="phone">
+        <label for="description">Описание вопроса</label> 
+        <input type="text" id="description" name="description">
+        <div class="checkbox-wrap">
+          <input type="checkbox" id="checkbox" name="checkbox">
+          <label for="checkbox">Согласен на обработку персональных данных и с условиями <a class="privacy" href="#">политики конфиденциальности</a></label>
+         </div>
+      </form>
+      </div>
+    </div>
+  </div>
+
 </body>
 </div>
 <script src="./js/accordion.js"></script>
 <script src="./js/slider.js"></script>
+<script src="./js/modal.js"></script>
 </html>

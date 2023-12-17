@@ -8,20 +8,3 @@ buttons.forEach(button => {
   });
 });
 
-const consultButtons = document.querySelectorAll(".consult");
-const modal = document.querySelector(".modal");
-const closeButton = document.querySelector(".close-button");
-
-const openModal = () => {
-  modal.style.display = "block";
-}
-
-const closeModal = () => {
-  modal.style.display = "none";
-}
-
-consultButtons.forEach(button => {
-  button.addEventListener("click", openModal);
-});
-
-closeButton.addEventListener("click", closeModal);
