@@ -563,7 +563,7 @@ img {
 
 .steps-item::before {
   content: "0" counter(my-counter) ".";
-  font-size: 35px;
+  font-size: 32px;
   font-weight: bold;
   color: rgba(0, 0, 0, 1);
   position: absolute; 
@@ -577,7 +577,7 @@ img {
 }
 
 .step-description-title {
-  font-size: 35px;
+  font-size: 32px;
   font-weight: 700;
   margin: 10px 0 10px 50px;
 }
@@ -731,7 +731,6 @@ img {
   }
    
 }
-
 
 @media (min-width: 390px) and (max-width: 999px) {
   .steps {
