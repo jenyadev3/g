@@ -31,53 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
   stepsSlide(currentIndex);
   articleSlide(currentIndex);
 
-  // Добавляем обработчики для смахивания пальцем
-  const stepsList = document.querySelector(".steps-list");
-  const articleList = document.querySelector(".article-list");
-
-  stepsList.addEventListener('touchstart', handleTouchStart);
-  stepsList.addEventListener('touchmove', handleTouchMove);
-  stepsList.addEventListener('touchend', handleTouchEnd);
-
-  articleList.addEventListener('touchstart', handleTouchStart);
-  articleList.addEventListener('touchmove', handleTouchMove);
-  articleList.addEventListener('touchend', handleTouchEnd);
-
-  function handleTouchStart(event) {
-    xDown = event.touches[0].clientX;
-  }
-
-  function handleTouchMove(event) {
-    if (!xDown) {
-      return;
-    }
-
-    let xUp = event.touches[0].clientX;
-    let xDiff = xDown - xUp;
-
-    if (Math.abs(xDiff) > 0) {
-      if (xDiff > 0) {
-        // Swipe left
-        currentIndex += 1;
-      } else {
-        // Swipe right
-        currentIndex -= 1;
-      }
-
-      if (event.currentTarget.classList.contains('steps-list')) {
-        stepsSlide(currentIndex);
-      } else if (event.currentTarget.classList.contains('article-list')) {
-        articleSlide(currentIndex);
-      }
-
-      xDown = null;
-    }
-  }
-
-  function handleTouchEnd() {
-    xDown = null;
-  }
-});
 
 
 
