@@ -111,7 +111,7 @@ img {
 }
 
 
-@media (min-width: 390px) and (max-width: 991px) {
+@media (min-width: 360px) and (max-width: 991px) {
   .header {
     background-color: #E9E9E9;
   }
@@ -133,12 +133,32 @@ img {
     height: 40px;
   }
 
-  .header-menu {
-    display: none;
-  }
-
   .phone-link {
     margin-top: 5px;
+  }
+
+  .header-menu{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    top: 20px;
+    left: 0;
+    width: 120px;
+    height: 170px;
+    font-size: 13px;
+    background-color:#F8F8F6;
+    padding-top: 20px;
+    margin-left: 60.5px;
+    border-top: 1px solid #DBDCE0;
+  }
+
+  .menu-item {
+    margin-bottom: 10px;
+    margin-left: 13px;
+  }
+
+  .menu-item-link {
+    font-size: 20px;
   }
 }
 
@@ -253,7 +273,7 @@ img {
   }
 }
 
-@media (min-width: 390px) and (max-width: 991px) {
+@media (min-width: 360px) and (max-width: 991px) {
   .banner {
     background-color: #D9D9D9;
   }
@@ -452,7 +472,7 @@ img {
   }  
 }
 
-@media (min-width: 390px) and (max-width: 991px) {
+@media (min-width: 360px) and (max-width: 991px) {
   .services {
     padding-top: 0;
     padding-bottom: 40px;
@@ -728,7 +748,7 @@ img {
    
 }
 
-@media (min-width: 390px) and (max-width: 999px) {
+@media (min-width: 360px) and (max-width: 999px) {
   .steps {
     padding: 60px 0;
     border-top: 1px solid #000;
@@ -967,7 +987,7 @@ img {
   opacity: 0.5;
 }
 
-@media (min-width: 390px) and (max-width: 1249px) {
+@media (min-width: 360px) and (max-width: 1249px) {
   .faq-title-block {
     width: 87%;
   }
@@ -1002,9 +1022,9 @@ img {
   }
   
   .faq-item {
-    width: 330px;
-    max-height: 345px;
-    padding: 15px 0 20px 28px;
+    width: 304px;
+    max-height: 365px;
+    padding: 15px 10px 20px 28px;
     margin-bottom: 30px;
   }
   
@@ -1127,7 +1147,7 @@ img {
   font-size: 50px;
 }
 
-@media (min-width: 390px) and (max-width: 1199px) {
+@media (min-width: 360px) and (max-width: 1199px) {
   .about {
     padding: 60px 0;
   }
@@ -1246,7 +1266,7 @@ cite {
   font-style: normal;
 }
 
-@media (min-width: 390px) and (max-width: 1199px) {
+@media (min-width: 360px) and (max-width: 1199px) {
 
   .articles-wrap {
     min-width: 82.05%;
@@ -1408,7 +1428,7 @@ cite {
   color:rgba(0, 0, 0, 1);
 }
 
-@media (min-width: 390px) and (max-width: 991px) {
+@media (min-width: 360px) and (max-width: 991px) {
   .appointment {
     padding: 70px 0;
   }
@@ -1534,7 +1554,7 @@ cite {
   background-color: rgba(0, 0, 0, 1);
 }
 
-@media (min-width: 390px) and (max-width: 991px) {
+@media (min-width: 360px) and (max-width: 991px) {
   .footer {
     padding-bottom: 25px;
   }
@@ -1656,7 +1676,7 @@ cite {
   outline: none;
 }
 
-@media (min-width: 390px) and (max-width: 991px) {
+@media (min-width: 360px) and (max-width: 991px) {
   .modal-container {
     width: 330px;
     height: 400px;
@@ -1667,3 +1687,5 @@ cite {
     margin-bottom: 30px;
   }
 }
+
+
